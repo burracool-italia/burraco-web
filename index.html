@@ -22,6 +22,7 @@
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Burraco">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
@@ -31,6 +32,16 @@
 
   <title>Burraco - Il tuo torneo</title>
   <link rel="manifest" href="manifest.json">
+  <script>
+    // Vero se la pagina e' aperta dall'icona sulla schermata Home (Android: display-mode
+    // standalone; iPhone: navigator.standalone). Usato per mostrare o no l'invito a installarla.
+    function burracoSullaHome() {
+      try {
+        return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+               window.navigator.standalone === true;
+      } catch (e) { return false; }
+    }
+  </script>
 </head>
 <body>
   <!--

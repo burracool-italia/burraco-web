@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Come mettere l'icona di Burraco sulla schermata Home del telefono per ricevere le notifiche.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icons/Icon-192.png">
+<title>Burraco - Icona sulla Home</title>
+<style>
+  :root {
+    --blu: #1B5EA5; --testo: #1b2430; --sfondo: #f4f7fb; --scheda: #ffffff;
+    --bordo: #d9e1ec; --soft: #5a6677; --avviso: #fff4cc; --avviso-testo: #3d2e00;
+    --passo: #1B5EA5; --passo-testo: #ffffff; --ok: #e7f4ea; --ok-testo: #14532d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --testo: #e8edf4; --sfondo: #10151c; --scheda: #1a222d; --bordo: #2c3846;
+      --soft: #a3afbf; --avviso: #3a2f0b; --avviso-testo: #ffe9a8; --passo: #4f9be0;
+      --passo-testo: #0b1a2b; --ok: #12301d; --ok-testo: #bfe9cc; --blu: #6db1f0;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--sfondo); color: var(--testo);
+    font: 17px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .pagina { max-width: 640px; margin: 0 auto; padding: 20px 16px 48px; display: flex; flex-direction: column; }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  header img { width: 60px; height: 60px; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  h1 { font-size: 24px; line-height: 1.2; margin: 0; color: var(--blu); }
+  h2 { font-size: 21px; margin: 0 0 4px; color: var(--blu); }
+  p { margin: 0 0 10px; }
+  .perche {
+    background: var(--avviso); color: var(--avviso-testo); border-radius: 14px;
+    padding: 14px 16px; margin-bottom: 18px;
+  }
+  .perche b { display: block; font-size: 18px; margin-bottom: 4px; }
+  .scelta { display: flex; gap: 10px; margin-bottom: 18px; }
+  .scelta a {
+    flex: 1; text-align: center; text-decoration: none; font-weight: 700; padding: 12px 8px;
+    border-radius: 12px; border: 2px solid var(--blu); color: var(--blu); background: var(--scheda);
+  }
+  section {
+    background: var(--scheda); border: 1px solid var(--bordo); border-radius: 16px;
+    padding: 18px 16px 8px; margin-bottom: 18px; scroll-margin-top: 12px;
+  }
+  .nota { color: var(--soft); font-size: 15px; margin-bottom: 14px; }
+  ol { list-style: none; counter-reset: p; margin: 0; padding: 0; }
+  ol > li {
+    counter-increment: p; position: relative; padding: 0 0 16px 46px; min-height: 36px;
+  }
+  ol > li::before {
+    content: counter(p); position: absolute; left: 0; top: 0; width: 32px; height: 32px;
+    border-radius: 50%; background: var(--passo); color: var(--passo-testo);
+    font-weight: 700; display: flex; align-items: center; justify-content: center;
+  }
+  li b { font-weight: 700; }
+  .ico { display: inline-block; vertical-align: -5px; width: 24px; height: 24px; color: var(--blu); }
+  .importante { background: var(--ok); color: var(--ok-testo); border-radius: 10px; padding: 8px 12px; margin-top: 6px; font-size: 16px; }
+  details { border-top: 1px solid var(--bordo); padding: 10px 0; }
+  details:first-of-type { margin-top: 4px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 8px 0 0; color: var(--soft); font-size: 16px; }
+  #android { order: 1; }  #iphone { order: 2; }
+  .ios #iphone { order: 1; } .ios #android { order: 2; }
+  #problemi { order: 3; }
+  footer { order: 4; color: var(--soft); font-size: 14px; text-align: center; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="pagina" id="pagina">
+  <header>
+    <img src="icons/Icon-192.png" alt="">
+    <h1>Metti Burraco<br>sulla schermata Home</h1>
+  </header>
+
+  <div class="perche">
+    <b>A cosa serve: ricevere le notifiche</b>
+    <p>Tutto quello che trovi qui serve per un solo motivo: avere le notifiche di Burraco. Ti avvisano
+    quando inizia il torneo e il turno, quando cambia il tuo compagno e quando escono risultati e premi.</p>
+    <p><b style="display:inline;font-size:inherit">Su iPhone, senza l'icona sulla Home le notifiche non arrivano.</b>
+    Su Android possono arrivare anche dal browser, ma con l'icona sono più affidabili e Burraco si apre a tutto schermo.</p>
+  </div>
+
+  <div class="scelta">
+    <a href="#iphone">iPhone</a>
+    <a href="#android">Android</a>
+  </div>
+
+  <section id="iphone">
+    <h2>iPhone</h2>
+    <p class="nota">Serve iOS 16.4 o successivo. Si fa solo con <b>Safari</b>, la bussola azzurra.</p>
+    <ol>
+      <li>Apri l'indirizzo di Burraco in <b>Safari</b>. Se l'hai aperto da WhatsApp o da un'altra app, tocca la bussola di Safari in basso a destra, oppure copia l'indirizzo e incollalo in Safari.</li>
+      <li>Tocca il tasto <b>Condividi</b>, il quadrato con la freccia verso l'alto, in basso al centro
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg>.</li>
+      <li>Scorri il menu verso l'alto e tocca <b>«Aggiungi alla schermata Home»</b>.</li>
+      <li>Lascia il nome «Burraco» e tocca <b>«Aggiungi»</b> in alto a destra.</li>
+      <li><b>Chiudi Safari</b> e apri Burraco dall'<b>icona sulla Home</b>.
+        <div class="importante">Apri sempre Burraco da questa icona, non da Safari: è così che arrivano le notifiche. Dovrai accedere di nuovo una volta.</div></li>
+      <li>Accedi, scegli il tuo circolo e, quando compare «Burraco vuole inviarti notifiche», tocca <b>«Consenti»</b>.</li>
+    </ol>
+    <details>
+      <summary>Ho toccato «Non consentire» per sbaglio</summary>
+      <p>Vai in <b>Impostazioni</b> dell'iPhone → <b>Notifiche</b> → <b>Burraco</b> e attiva <b>«Consenti notifiche»</b>.</p>
+    </details>
+    <details>
+      <summary>Non trovo «Aggiungi alla schermata Home»</summary>
+      <p>Controlla di essere in Safari e non dentro un'altra app. Se la voce manca, verifica la versione di iOS in Impostazioni → Generali → Info: serve la 16.4 o successiva. Se è più vecchia, aggiorna l'iPhone da Impostazioni → Generali → Aggiornamento software.</p>
+    </details>
+  </section>
+
+  <section id="android">
+    <h2>Android</h2>
+    <p class="nota">Il percorso è per <b>Chrome</b>. Se usi Samsung Internet, trovi le differenze sotto.</p>
+    <ol>
+      <li>Apri l'indirizzo di Burraco in <b>Chrome</b>. Se l'hai aperto da WhatsApp, Telegram o da un'altra app, tocca i tre puntini in alto a destra e scegli <b>«Apri in Chrome»</b>.</li>
+      <li>In Chrome tocca i <b>tre puntini</b> in alto a destra
+        <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>.</li>
+      <li>Tocca <b>«Installa app»</b>. Se non c'è, tocca <b>«Aggiungi a schermata Home»</b>.</li>
+      <li>Conferma con <b>«Installa»</b> o <b>«Aggiungi»</b>. L'icona di Burraco compare sulla Home.</li>
+      <li>Apri Burraco dall'<b>icona sulla Home</b>.
+        <div class="importante">Apri Burraco da questa icona: l'app si apre a tutto schermo e le notifiche sono più affidabili.</div></li>
+      <li>Accedi, scegli il tuo circolo e, quando compare la richiesta di notifiche, tocca <b>«Consenti»</b>.</li>
+    </ol>
+    <details>
+      <summary>Uso Samsung Internet</summary>
+      <p>Tocca il menu con le tre righe in basso a destra → <b>«Aggiungi pagina a»</b> → <b>«Schermata Home»</b> → <b>«Aggiungi»</b>. Poi apri Burraco dall'icona e tocca «Consenti» alla richiesta delle notifiche.</p>
+    </details>
+    <details>
+      <summary>Ho toccato «Blocca» per sbaglio</summary>
+      <p>Tieni premuta l'icona di Burraco sulla Home, tocca <b>«i»</b> (Info app) → <b>Notifiche</b> e attivale. Se non basta, in Chrome tocca il lucchetto accanto all'indirizzo → <b>Autorizzazioni</b> → <b>Notifiche</b> → «Consenti».</p>
+    </details>
+  </section>
+
+  <section id="problemi">
+    <h2>Le notifiche non arrivano?</h2>
+    <ol>
+      <li>Hai aperto Burraco <b>dall'icona sulla Home</b>, non dal browser?</li>
+      <li>Dopo l'accesso hai <b>scelto il circolo</b> e toccato «Consenti» alla richiesta di notifiche?</li>
+      <li>Le notifiche di Burraco sono attive nelle impostazioni del telefono (vedi sopra)?</li>
+      <li>Il telefono è in modalità <b>«Non disturbare»</b>, «Concentrazione» o risparmio energetico estremo? Possono silenziare tutto.</li>
+      <li>Sei iscritto al torneo con la <b>stessa email</b> con cui hai fatto l'accesso? L'organizzatore può controllarlo dal Gestionale.</li>
+    </ol>
+  </section>
+
+  <footer>Burraco · Il tuo torneo</footer>
+</div>
+<script>
+  // Mette per prima la sezione del telefono in uso
+  if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) document.getElementById('pagina').classList.add('ios');
+</script>
+</body>
+</html>
