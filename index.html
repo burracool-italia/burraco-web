@@ -41,6 +41,35 @@
                window.navigator.standalone === true;
       } catch (e) { return false; }
     }
+
+    // L'icona sulla schermata Home e' gia' stata creata? Serve a NON riproporre l'invito a chi apre la
+    // pagina dal browser dopo averla gia' installata. Lo sa dire solo Chrome su Android
+    // (getInstalledRelatedApps, con "related_applications" nel manifest); in piu' si ricorda in
+    // localStorage quando l'icona viene creata (evento appinstalled) o quando la pagina viene aperta
+    // dall'icona. Su iPhone Safari non offre nulla: li' risponde sempre "non lo so" (falso).
+    var BURRACO_CHIAVE_ICONA = 'burraco_icona_creata';
+    function burracoRicordaIcona(creata) {
+      try {
+        if (creata) localStorage.setItem(BURRACO_CHIAVE_ICONA, '1');
+        else localStorage.removeItem(BURRACO_CHIAVE_ICONA);
+      } catch (e) {}
+    }
+    window.addEventListener('appinstalled', function () { burracoRicordaIcona(true); });
+    if (burracoSullaHome()) burracoRicordaIcona(true);
+    function burracoIconaGiaCreata() {
+      var ricordata = false;
+      try { ricordata = localStorage.getItem(BURRACO_CHIAVE_ICONA) === '1'; } catch (e) {}
+      try {
+        if (navigator.getInstalledRelatedApps) {
+          return navigator.getInstalledRelatedApps().then(function (app) {
+            var creata = !!(app && app.length);
+            burracoRicordaIcona(creata);      // il browser lo sa di sicuro: vale la sua risposta
+            return creata;
+          }).catch(function () { return ricordata; });
+        }
+      } catch (e) {}
+      return Promise.resolve(ricordata);
+    }
   </script>
 </head>
 <body>

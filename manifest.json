@@ -8,6 +8,12 @@
     "description": "Il tuo torneo di burraco: tavolo, risultati e classifica.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
+    "related_applications": [
+        {
+            "platform": "webapp",
+            "url": "https://burracool-italia.github.io/burraco-web/manifest.json"
+        }
+    ],
     "icons": [
         {
             "src": "icons/Icon-192.png",
