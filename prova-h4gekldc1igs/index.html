@@ -34,6 +34,8 @@
   <title>Burraco - Il tuo torneo</title>
   <link rel="manifest" href="manifest.json">
   <script>
+    // Niente invito automatico del browser a installare l'app (Chrome su Android).
+    window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); });
     // Vero se la pagina e' aperta dall'icona sulla schermata Home (Android: display-mode
     // standalone; iPhone: navigator.standalone). Usato per mostrare o no l'invito a installarla.
     function burracoSullaHome() {
