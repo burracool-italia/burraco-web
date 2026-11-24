@@ -8454,7 +8454,7 @@ m=A.c7("https://web-production-c734e.up.railway.app/accesso",0,null)
 i=t.N
 h=A.a2(["Content-Type","application/json","Authorization","Bearer "+n],i,i)
 s=8
-return A.h(A.O2(m,B.U.nl(A.a2(["tipo","web","sistema",k,"nome",j.c.a.c,"versione","2.0.2","pro",!1,"sulla_home",A.b_o()],i,t.X),null),h).dm(B.dx),$async$Ov)
+return A.h(A.O2(m,B.U.nl(A.a2(["tipo","web","sistema",k,"nome",j.c.a.c,"versione","2.3.1","pro",!1,"sulla_home",A.b_o()],i,t.X),null),h).dm(B.dx),$async$Ov)
 case 8:p=2
 s=6
 break
@@ -50372,8 +50372,8 @@ else{s=n.ay
 if(s==null)s="Il torneo non \xe8 raggiungibile in questo momento.\nRiprova tra poco o avvisa l'organizzatore."}s=A.b([m,B.eW,q,B.cU,A.a6(s,o,o,o,o,B.a_O,B.F,o),B.af],p)
 if(n.y&&!n.z)s.push(B.a3W)
 s.push(B.hq)
-if(n.y&&!n.z)s.push(A.ms(B.ex,B.a4n,n.gV1(),A.k3(o,o,B.y,o,o,o,o,o,o,B.j,o,o,o,o,new A.co(A.bN(10),B.l),o,o,o,o,o)))
-if(n.z)s.push(A.ms(B.rl,B.a4C,n.ga_N(),A.k3(o,o,B.y,o,o,o,o,o,o,B.j,o,o,o,o,new A.co(A.bN(10),B.l),o,o,o,o,o)))
+if(n.y&&!n.z)s.push(A.ms(B.ex,B.a4m,n.gV1(),A.k3(o,o,B.y,o,o,o,o,o,o,B.j,o,o,o,o,new A.co(A.bN(10),B.l),o,o,o,o,o)))
+if(n.z)s.push(A.ms(B.rl,B.a4B,n.ga_N(),A.k3(o,o,B.y,o,o,o,o,o,o,B.j,o,o,o,o,new A.co(A.bN(10),B.l),o,o,o,o,o)))
 s.push(B.eW)
 s.push(A.a6(n.a.c,o,o,o,o,B.hw,o,o))
 n=n.as
@@ -50409,7 +50409,7 @@ h=J.ad(k,"android")
 j=B.c.aG(J.bE(h==null?"":h))
 h=J.ad(k,"url")
 i=B.c.aG(J.bE(h==null?"":h))
-if(J.bC(j)===0||!A.baA(j,"2.0.2")){s=1
+if(J.bC(j)===0||!A.baA(j,"2.3.1")){s=1
 break}if(n.c==null){s=1
 break}n.J(new A.awD(n,j,i))
 p=2
@@ -50447,8 +50447,8 @@ s=A.hI(B.qb,1)
 r=A.bN(10)
 q=t.p
 n=A.c6(A.b([A.fk(B.MK,B.eh,o,o),B.c8,A.cx(A.a6("\xc8 disponibile la versione "+n+" dell'app",o,o,o,o,B.bO,o,o))],q),B.q,B.m,B.p,0,o)
-p=A.nx(B.a4G,new A.awH(this),o)
-return A.c_(o,A.bO(A.b([n,B.bG,B.a46,A.c6(A.b([p,new A.R_(!0,this.gats(),o,o,o,o,B.n,o,!1,o,!0,o,new A.ZQ(B.a3L,B.Nl,o,o,o),o)],q),B.q,B.h7,B.p,0,o)],q),B.al,B.m,B.p),B.n,o,o,new A.bQ(B.i0,o,s,r,o,o,B.O),o,o,o,B.qA,B.Lt,o,o,1/0)}}
+p=A.nx(B.a4F,new A.awH(this),o)
+return A.c_(o,A.bO(A.b([n,B.bG,B.a4P,A.c6(A.b([p,new A.R_(!0,this.gats(),o,o,o,o,B.n,o,!1,o,!0,o,new A.ZQ(B.a3L,B.Nl,o,o,o),o)],q),B.q,B.h7,B.p,0,o)],q),B.al,B.m,B.p),B.n,o,o,new A.bQ(B.i0,o,s,r,o,o,B.O),o,o,o,B.qA,B.Lt,o,o,1/0)}}
 A.awE.prototype={
 $1(a){var s=t.OL
 s=A.U(new A.a5(A.b(a.split("."),t.s),new A.awF(),s),s.i("am.E"))
@@ -50537,7 +50537,7 @@ A.axW.prototype={
 $0(){return this.a.d=this.b},
 $S:0}
 A.ay_.prototype={
-$2(a,b){var s=null,r=this.a,q=t.p,p=A.b([B.a4w,B.cs,B.a48,B.Dl,A.ms(B.Ne,B.a3N,r.gagm(),A.k3(s,s,B.y,s,s,s,s,s,s,B.j,s,B.De,s,s,new A.co(A.bN(10),B.l),s,s,s,s,s)),B.af,B.a4E,B.eW,B.Wj,B.cU,new A.H8(r.gau6(),s)],q)
+$2(a,b){var s=null,r=this.a,q=t.p,p=A.b([B.a4v,B.cs,B.a47,B.Dl,A.ms(B.Ne,B.a3N,r.gagm(),A.k3(s,s,B.y,s,s,s,s,s,s,B.j,s,B.De,s,s,new A.co(A.bN(10),B.l),s,s,s,s,s)),B.af,B.a4D,B.eW,B.Wj,B.cU,new A.H8(r.gau6(),s)],q)
 if(r.d)B.b.N(p,A.b([B.cU,B.hS],q))
 r=r.e
 if(r!=null)B.b.N(p,A.b([B.by,A.a6(r,s,s,s,s,B.jO,B.F,s)],q))
@@ -50564,7 +50564,7 @@ break}A.ll(o,A.d9(new A.aAY(),null,t.z))
 case 1:return A.m(q,r)}})
 return A.n($async$KL,r)},
 K(a){var s=null
-return A.ko(A.qY(A.b([A.hp(s,s,B.ex,s,s,new A.aB_(this),s,s,"Ricarica"),A.hp(s,s,B.N_,s,s,new A.aB0(a),s,s,"Sfoglia tornei aperti alle iscrizioni (anche di altri circoli)"),A.hp(s,s,A.aMX(s,s),s,s,new A.aB1(a),s,s,"Torna al torneo"),A.hp(s,s,B.mi,s,s,this.gaoU(),s,s,s)],t.p),B.y,s,s,B.j,s,B.a4H),s,A.i6(!0,new A.E8(this.d),B.a2,!0))}}
+return A.ko(A.qY(A.b([A.hp(s,s,B.ex,s,s,new A.aB_(this),s,s,"Ricarica"),A.hp(s,s,B.N_,s,s,new A.aB0(a),s,s,"Sfoglia tornei aperti alle iscrizioni (anche di altri circoli)"),A.hp(s,s,A.aMX(s,s),s,s,new A.aB1(a),s,s,"Torna al torneo"),A.hp(s,s,B.mi,s,s,this.gaoU(),s,s,s)],t.p),B.y,s,s,B.j,s,B.a4G),s,A.i6(!0,new A.E8(this.d),B.a2,!0))}}
 A.aAY.prototype={
 $1(a){return B.iT},
 $S:47}
@@ -50598,13 +50598,13 @@ s=A.d9(new A.aAN(),null,t.z)
 A.cV(r,!1).fg(s)},
 l(){this.d.l()
 this.aJ()},
-K(a){var s,r,q,p=this,o=null,n=t.p,m=A.b([A.cH(A.Tj(B.Nc,B.a4l,p.gaoS(),o),48,1/0)],n)
+K(a){var s,r,q,p=this,o=null,n=t.p,m=A.b([A.cH(A.Tj(B.Nc,B.a4k,p.gaoS(),o),48,1/0)],n)
 m.push(B.cU)
 m.push(B.qq)
 m.push(B.cs)
 m.push(B.a3V)
 m.push(B.bG)
-m.push(B.a4a)
+m.push(B.a49)
 m.push(B.cs)
 s=A.b_o()
 if(!s)B.b.N(m,A.b([A.Tj(B.N0,B.a3Z,A.bej(),o),B.cs],n))
@@ -50619,7 +50619,7 @@ q=r?"Muto":""+B.d.aO(s*100)+"%"
 q=A.cx(new A.Hs(s,new A.aAU(p),new A.aAV(),0,1,10,q,o))
 m.push(A.c6(A.b([B.MY,q,A.cH(A.a6(r?"Muto":""+B.d.aO(s*100)+"%",o,o,o,o,B.hw,o,o),o,44)],n),B.q,B.m,B.p,0,o))
 m.push(new A.Wa(p.r,new A.aAW(p),B.a4S,B.a2,o))
-m.push(new A.ec(B.hI,o,o,A.Tj(B.N2,B.a4L,new A.aAX(p),o),o))
+m.push(new A.ec(B.hI,o,o,A.Tj(B.N2,B.a4K,new A.aAX(p),o),o))
 return A.lx(new A.b8(B.LB,A.bO(m,B.al,B.m,B.aN),o),o,B.a4,o,o,B.ai)}}
 A.aAO.prototype={
 $0(){var s=this.a
@@ -50908,7 +50908,7 @@ break
 case 6:case 1:return A.m(q,r)
 case 2:return A.l(o.at(-1),r)}})
 return A.n($async$CT,r)},
-K(a){var s,r,q,p,o,n,m=this,l=null,k="Registrati",j=t.p,i=A.b([B.oT,B.hq,A.PD(A.bN(18),A.aUo("assets/icon/icon.png",l,72,72),B.bX),B.af,B.a4X,B.dY,B.a4y,B.bG,B.a40,B.eW],j)
+K(a){var s,r,q,p,o,n,m=this,l=null,k="Registrati",j=t.p,i=A.b([B.oT,B.hq,A.PD(A.bN(18),A.aUo("assets/icon/icon.png",l,72,72),B.bX),B.af,B.a4X,B.dY,B.a4x,B.bG,B.a40,B.eW],j)
 if(m.as!=null){s=B.y.pI(0.06)
 r=A.bN(10)
 q=A.b([B.a3U],j)
@@ -50930,7 +50930,7 @@ q=A.fk(s?B.MN:B.MM,l,l,l)
 p=s?"Nascondi password":"Mostra password"
 r.push(A.id(l,m.e,A.Eh(l,B.bE,l,l,l,l,l,l,!0,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,"Password",!0,!0,!1,l,B.rk,l,l,l,l,l,l,A.hp(l,l,q,l,l,new A.aC5(m),l,l,p),l,l,l,l,l),l,l,1,!s,l,l,!1,l,B.aa,B.bz))
 if(m.y)B.b.N(r,A.b([B.by,A.id(l,m.f,B.NL,l,l,1,!m.z,l,l,!1,l,B.aa,B.bz)],j))
-if(!m.y)B.b.N(r,A.b([new A.ec(B.fd,l,l,A.nx(B.a4j,m.gasY(),l),l)],j))
+if(!m.y)B.b.N(r,A.b([new A.ec(B.fd,l,l,A.nx(B.a4i,m.gasY(),l),l)],j))
 else r.push(B.af)
 B.b.N(i,r)}s=m.Q
 if(s!=null){r=A.hI(B.hW,1)
@@ -50942,7 +50942,7 @@ s=m.y
 r=A.fk(s?B.MA:B.re,l,l,l)
 j=A.ms(r,A.a6(s?k:"Entra",l,l,l,l,B.hx,l,l),m.gavl(),j)}i.push(j)
 i.push(B.cU)
-i.push(A.a6("Versione 2.0.2  \xb7  build 24/11/2026 19:44",l,l,l,l,A.bz(l,l,B.bY,l,l,l,l,l,l,l,l,11,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),l,l))
+i.push(A.a6("Versione 2.3.1  \xb7  build 24/11/2026 19:49",l,l,l,l,A.bz(l,l,B.bY,l,l,l,l,l,l,l,l,11,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),l,l))
 return A.ko(l,l,A.i6(!0,A.lx(A.bO(i,B.q,B.c4,B.p),l,B.a4,B.bK,l,B.ai),B.a2,!0))},
 a_o(a,b,c){var s=null,r=A.bN(8),q=b?B.y:B.C,p=A.bN(8)
 return A.hr(!1,B.N,!0,s,A.mM(!1,r,!0,A.aSA(A.a6(a,s,s,s,s,A.bz(s,s,b?B.j:B.y,s,s,s,s,s,s,s,s,s,s,s,B.cL,s,s,!0,s,s,s,s,s,s,s,s),B.F,s),new A.bQ(q,s,s,p,s,s,B.O),B.bD,s,B.qD),s,!0,s,s,s,s,s,s,s,s,s,c,s,s,s,s,s,s,s),B.n,B.C,0,s,s,s,s,s,B.cP)}}
@@ -51030,7 +51030,7 @@ $S:17}
 A.aNb.prototype={
 $1(a){var s=null,r=A.a6(a.a3o(),s,s,s,s,B.a2A,s,s),q=a.b
 q=q==null?s:q.k(0)
-return A.c_(s,A.i6(!0,A.lx(A.bO(A.b([B.a4M,B.cs,r,B.af,A.a6(q==null?"":q,s,s,s,s,B.a37,s,s)],t.p),B.al,B.m,B.aN),s,B.a4,B.lt,s,B.ai),B.a2,!0),B.n,B.ds,s,s,s,s,s,s,s,s,s,s)},
+return A.c_(s,A.i6(!0,A.lx(A.bO(A.b([B.a4L,B.cs,r,B.af,A.a6(q==null?"":q,s,s,s,s,B.a37,s,s)],t.p),B.al,B.m,B.aN),s,B.a4,B.lt,s,B.ai),B.a2,!0),B.n,B.ds,s,s,s,s,s,s,s,s,s,s)},
 $S:334}
 A.Pg.prototype={
 K(a){var s=null
@@ -51608,7 +51608,7 @@ p=A.a6(p,a4,a4,a4,a4,a4,a4,a4)
 o=t.p
 n=A.b([],o)
 l=a3.a.as
-if(!l)n.push(A.nx(B.a49,a3.ga0T(),a4))
+if(!l)n.push(A.nx(B.a48,a3.ga0T(),a4))
 p=A.qY(n,B.y,a4,a4,B.j,a4,p)
 k=a3.a_6(a3.a.c)
 j=a3.a_6(a3.a.d)
@@ -51762,7 +51762,7 @@ q=s.ax?s.gtx():s.fE(s.a.e-1)>=s.fF(s.a.e-1)
 s=s.a
 s=q?s.c:s.d
 s=A.a6(o+" in rosso.\n\nIl risultato sar\xe0 quello scritto sul foglio: "+r+" MP, vince "+s+". Va bene cos\xec?",p,p,p,p,p,p,p)
-return A.aSz(A.b([A.nx(B.a3M,new A.aCk(a),p),A.nx(B.a4B,new A.aCl(a),p)],t.p),s,B.a4x)},
+return A.aSz(A.b([A.nx(B.a3M,new A.aCk(a),p),A.nx(B.a4A,new A.aCl(a),p)],t.p),s,B.a4w)},
 $S:185}
 A.aCk.prototype={
 $0(){A.cV(this.a,!1).lu(!1)
@@ -52762,7 +52762,7 @@ if(s==null)s=r
 else{s=s.h(0,"coppia")
 s=s==null?r:J.ad(s,"id")}return s},
 agS(){var s,r,q,p,o,n,m,l,k,j,i,h,g=this,f=null
-if(J.hf(g.fx))return g.qi(A.e5(new A.b8(B.bK,A.bO(A.b([A.fk(B.MT,B.bY,f,52),B.af,B.a4P],t.p),B.q,B.m,B.aN),f),f,f))
+if(J.hf(g.fx))return g.qi(A.e5(new A.b8(B.bK,A.bO(A.b([A.fk(B.MT,B.bY,f,52),B.af,B.a4O],t.p),B.q,B.m,B.aN),f),f,f))
 s=g.gXX()
 r=g.fy==="giallo"?"Giocatore":"Coppia"
 q=t.p
@@ -52816,7 +52816,7 @@ m=A.a3(J.ad(n,"girone_nome"))
 if(m==null)m="Girone"
 J.eG(p.bB(m,new A.aE2()),n)}l=A.b([],t.p)
 if(!k.p3){s=A.bN(8)
-l.push(A.c_(j,B.a4f,B.n,j,j,new A.bQ(B.Jk,j,A.hI(B.J2,1),s,j,j,B.O),j,j,j,B.Lm,B.qH,j,j,1/0))}p.az(0,new A.aE3(k,l))
+l.push(A.c_(j,B.a4e,B.n,j,j,new A.bQ(B.Jk,j,A.hI(B.J2,1),s,j,j,B.O),j,j,j,B.Lm,B.qH,j,j,1/0))}p.az(0,new A.aE3(k,l))
 if(q.length!==0)l.push(k.ZU("Premi tecnici",q))
 return k.qi(A.G9(A.mS(l,j,B.d4,j,!1),k.gahe()))},
 ZU(a,b){var s=null,r=A.b(["\ud83e\udd47","\ud83e\udd48","\ud83e\udd49"],t.s),q=J.an(b),p=q.gbN(b)&&J.c(J.ad(q.ga5(b),"tipo"),"girone"),o=A.b([B.Kx,B.Kv,B.Kw],t.UR)
@@ -52862,7 +52862,7 @@ t.kc.a(s)
 q=s==null?B.fT:s}else q=B.fT
 s=a0.h(0,"nome")
 p=t.p
-o=A.b([e.oc(A.c6(A.b([B.a45,A.cx(A.bO(A.b([A.a6(s==null?"Torneo":s,d,d,d,d,B.o0,d,d),B.eX,B.a4h],p),B.al,B.m,B.p))],p),B.q,B.m,B.p,0,d))],p)
+o=A.b([e.oc(A.c6(A.b([B.a45,A.cx(A.bO(A.b([A.a6(s==null?"Torneo":s,d,d,d,d,B.o0,d,d),B.eX,B.a4g],p),B.al,B.m,B.p))],p),B.q,B.m,B.p,0,d))],p)
 if(!e.p3){o.push(B.af)
 o.push(e.oc(A.bO(B.Py,B.q,B.m,B.p)))
 return A.mS(o,d,B.lt,d,!1)}if(a!=null){o.push(B.af)
@@ -52894,12 +52894,12 @@ s.toString
 o.push(e.oc(A.bO(A.b([B.a3H,B.dY,e.U3(s,t.nA.a(e.y.h(0,"coppia")))],p),B.al,B.m,B.p)))}o.push(B.by)
 o.push(A.ms(B.Nj,B.a3P,new A.aDH(e),A.k3(d,d,B.y,d,d,d,d,d,d,B.j,d,B.Db,d,d,new A.co(A.bN(10),B.l),d,d,d,d,d)))
 if(e.ak){o.push(B.dY)
-o.push(A.ms(B.N5,B.a4s,new A.aDI(e),A.k3(d,d,B.l2,d,d,d,d,d,d,B.j,d,B.Db,d,d,new A.co(A.bN(10),B.l),d,d,d,d,d)))}return A.mS(o,d,B.lt,d,!1)},
+o.push(A.ms(B.N5,B.a4r,new A.aDI(e),A.k3(d,d,B.l2,d,d,d,d,d,d,B.j,d,B.Db,d,d,new A.co(A.bN(10),B.l),d,d,d,d,d)))}return A.mS(o,d,B.lt,d,!1)},
 agC(){var s,r,q,p,o,n,m,l,k=this,j=null,i="nome_coppia1",h="nome_coppia2",g=k.y.h(0,"torneo"),f=k.y.h(0,"turno"),e=k.y.h(0,"partita"),d=t.nA.a(k.y.h(0,"coppia")),c=k.y.h(0,"avversari"),b=J.c(k.y.h(0,"giallo"),!0),a=A.a3(k.y.h(0,"coppia_giallo"))
 if(g==null)return B.IC
 if(J.c(J.ad(g,"stato"),"completato"))return k.agE(g)
 if(f==null){s=g.h(0,"nome")
-return A.e5(new A.b8(B.LD,A.bO(A.b([B.YC,B.eW,A.a6(s==null?"":s,j,j,j,j,B.o1,B.F,j),B.by,B.a3G,B.dY,B.a3R,B.Dl,A.aPV(B.ex,B.a4b,k.gYn(),j)],t.p),B.q,B.c4,B.p),j),j,j)}if(b&&e!=null){s=a==="A"
+return A.e5(new A.b8(B.LD,A.bO(A.b([B.YC,B.eW,A.a6(s==null?"":s,j,j,j,j,B.o1,B.F,j),B.by,B.a3G,B.dY,B.a3R,B.Dl,A.aPV(B.ex,B.a4a,k.gYn(),j)],t.p),B.q,B.c4,B.p),j),j,j)}if(b&&e!=null){s=a==="A"
 r=J.an(e)
 if(s){q=r.h(e,i)
 p=q==null?"\u2014":q}else{q=r.h(e,h)
@@ -52923,7 +52923,7 @@ if(k.CW&&k.cx!=null){n=k.cx
 n.toString
 q.push(k.U7(n))}if(k.cx==="confermata"&&k.dx!=null){n=k.dx
 n.toString
-B.b.N(q,A.b([B.af,k.oc(A.bO(A.b([B.a4K,B.dY,k.U3(n,d)],r),B.al,B.m,B.p))],r))}if(!k.CW&&!m){n=J.an(e)
+B.b.N(q,A.b([B.af,k.oc(A.bO(A.b([B.a4J,B.dY,k.U3(n,d)],r),B.al,B.m,B.p))],r))}if(!k.CW&&!m){n=J.an(e)
 m=n.h(e,i)
 m=m==null?j:J.bE(m)
 if(m==null)m=p
@@ -53006,7 +53006,7 @@ s=o.ch
 if(s!=null){r=A.cH(n,k?4:8,n)
 q=k?4:8
 p=A.bN(10)
-q=A.b([r,A.c_(n,A.c6(A.b([o.a14("VP vincitore",A.p(s.h(0,"vp_vincitore")),B.y),B.a4m,o.a14("VP perdente",A.p(o.ch.h(0,"vp_perdente")),B.b1)],i),B.q,B.mJ,B.p,0,n),B.n,n,n,new A.bQ(B.hU,n,n,p,n,n,B.O),n,n,n,n,new A.ah(q,q,q,q),n,n,n)],i)
+q=A.b([r,A.c_(n,A.c6(A.b([o.a14("VP vincitore",A.p(s.h(0,"vp_vincitore")),B.y),B.a4l,o.a14("VP perdente",A.p(o.ch.h(0,"vp_perdente")),B.b1)],i),B.q,B.mJ,B.p,0,n),B.n,n,n,new A.bQ(B.hU,n,n,p,n,n,B.O),n,n,n,n,new A.ah(q,q,q,q),n,n,n)],i)
 if(l)B.b.N(q,A.b([B.bG,A.a6("Diff. MP: "+A.p(o.ch.h(0,"differenza_mp")),n,n,n,n,B.hw,n,n)],i))
 B.b.N(h,q)}h.push(A.cH(n,k?6:8,n))
 l=k?B.cE:B.y
@@ -53312,7 +53312,7 @@ l=A.aOr(new A.dz(new A.aa(0,c,0,1/0),A.a6(h+A.p(l==null?"":l),m,m,m,!0,B.o_,m,m)
 if(k!=null&&k.length!==0&&k!=="\u2014"){g=A.b([],t.p)
 for(r=k.split(" / "),q=r.length,p=0;p<q;++p)g.push(A.a6(r[p],m,m,m,m,B.nZ,m,m))
 if(j!=null||i!=null)g.push(A.a6("VP "+A.p(j)+" \xb7 MP "+A.p(i),m,m,m,m,A.bz(m,m,B.c_,m,m,m,m,m,m,m,m,11,m,m,m,m,m,!0,m,m,m,m,m,m,m,m),m,m))
-g=A.bO(g,B.al,B.m,B.aN)}else g=B.a4d
+g=A.bO(g,B.al,B.m,B.aN)}else g=B.a4c
 g=A.aOr(new A.dz(new A.aa(0,d,0,1/0),g,m))
 if(f.length!==0)r=f
 else{if(typeof s=="number")o=s
@@ -53890,7 +53890,7 @@ return A.a2(["nome",s,"cognome",r],q,q)},
 $S:411}
 A.aFZ.prototype={
 $1(a){var s=this.a
-return A.aSz(A.b([A.nx(B.Ea,new A.aFS(s),null),A.nx(B.a3Y,new A.aFT(s),null)],t.p),B.a4z,B.a4c)},
+return A.aSz(A.b([A.nx(B.Ea,new A.aFS(s),null),A.nx(B.a3Y,new A.aFT(s),null)],t.p),B.a4y,B.a4b)},
 $S:185}
 A.aFS.prototype={
 $0(){var s=this.a,r=s.c
@@ -54125,7 +54125,7 @@ A.aHN.prototype={
 $2(a,b){var s,r,q,p=null,o=this.a,n=o.d?p:o.gajI()
 n=o.Ze(o.f,B.Mn,o.r,n,"Gioca nel torneo del tuo circolo abituale","Entra in un circolo")
 s=t.p
-n=A.b([B.oT,B.a4q,B.af,B.a4g,B.eW,n,B.cU,o.att(B.Mm,o.d?p:o.gasm(),"Cerca e iscriviti a un torneo aperto, anche di un altro circolo","Prenotati"),B.cU],s)
+n=A.b([B.oT,B.a4p,B.af,B.a4f,B.eW,n,B.cU,o.att(B.Mm,o.d?p:o.gasm(),"Cerca e iscriviti a un torneo aperto, anche di un altro circolo","Prenotati"),B.cU],s)
 if(o.d)n.push(B.hS)
 o=o.e
 if(o!=null){r=A.hI(B.hW,1)
@@ -54209,7 +54209,7 @@ $S:222}
 A.aIa.prototype={
 $2(a,b){var s,r=null,q=this.b[b],p=this.a,o=p.Do(q),n=p.IR(q)
 if(o)s=B.IG
-else s=n?A.aT4(B.y.pI(0.7),B.a4t,B.h8,B.jV):r
+else s=n?A.aT4(B.y.pI(0.7),B.a4s,B.h8,B.jV):r
 return A.aP8(!1,r,r,r,!0,r,r,r,!0,r,B.Ni,r,r,r,r,new A.aI4(p,q),!1,r,r,r,r,r,r,A.a6(q.a,r,r,r,r,r,r,r),s,r)},
 $S:146}
 A.aI4.prototype={
@@ -54248,7 +54248,7 @@ K(a){var s,r,q,p,o,n,m,l,k,j,i=this,h=null,g=J.qP(i.d,new A.aKp()),f=A.U(g,g.$ti
 if(i.r.length===0)s=f
 else{g=A.a_(f).i("aG<1>")
 s=A.U(new A.aG(f,new A.aKq(i),g),g.i("E.E"))}g=t.p
-r=A.qY(A.b([A.aPV(B.N9,B.a4O,new A.aKr(a),A.aPW(h,h,h,h,h,h,h,h,h,B.j,h,h,h,h,h,h,h,h,h,h))],g),B.y,h,h,B.j,h,B.a4u)
+r=A.qY(A.b([A.aPV(B.N9,B.a4N,new A.aKr(a),A.aPW(h,h,h,h,h,h,h,h,h,B.j,h,h,h,h,h,h,h,h,h,h))],g),B.y,h,h,B.j,h,B.a4t)
 q=A.a6("Iscriviti a un torneo aperto di qualsiasi circolo \u2014 anche per te e per uno o pi\xf9 compagni in un colpo solo.",h,h,h,h,A.bz(h,h,B.c_,h,h,h,h,h,h,h,h,12,h,h,h,h,h,!0,h,h,h,h,h,h,h,h),h,h)
 p=A.id(h,h,B.NK,h,h,1,!1,new A.aKs(i),h,!1,h,B.aa,B.bz)
 o=i.w
@@ -114513,15 +114513,15 @@ B.a8u=new A.a93(0,"pixel")
 B.d1=new A.r9(3,"experimentalWebParagraph")
 B.Iz=new A.wj(null,null,null,null,null,null,null)
 B.IA=new A.Ck(null,null,null,null,null,null)
-B.a4o=new A.aE("Nessun dato",null,null,null,null,null,null,null,null,null)
-B.IB=new A.iv(B.a0,null,null,B.a4o,null)
+B.a4n=new A.aE("Nessun dato",null,null,null,null,null,null,null,null,null)
+B.IB=new A.iv(B.a0,null,null,B.a4n,null)
 B.a8O=new A.avv(0,"material")
 B.hS=new A.k_(null,null,null,null,null,null,null,null,null,null)
 B.fn=new A.iv(B.a0,null,null,B.hS,null)
 B.a4_=new A.aE("Nessun torneo attivo trovato.",null,null,null,null,null,null,null,null,null)
 B.IC=new A.iv(B.a0,null,null,B.a4_,null)
-B.a4A=new A.aE("Nessun torneo attivo",null,null,null,null,null,null,null,null,null)
-B.ID=new A.iv(B.a0,null,null,B.a4A,null)
+B.a4z=new A.aE("Nessun torneo attivo",null,null,null,null,null,null,null,null,null)
+B.ID=new A.iv(B.a0,null,null,B.a4z,null)
 B.IE=new A.wm(null,null,null,null,null,null,null,null,null)
 B.ee=new A.wn(0,"none")
 B.dr=new A.wn(1,"isTrue")
@@ -114780,8 +114780,8 @@ B.E=new A.hS(700)
 B.bO=new A.u(!0,null,null,null,null,null,null,B.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.a3T=new A.aE("Vincitore",null,B.bO,null,null,null,null,null,null,null)
 B.Kv=new A.wM(B.a3T,!1)
-B.a4N=new A.aE("Premio",null,B.bO,null,null,null,null,null,null,null)
-B.Kw=new A.wM(B.a4N,!0)
+B.a4M=new A.aE("Premio",null,B.bO,null,null,null,null,null,null,null)
+B.Kw=new A.wM(B.a4M,!0)
 B.a3X=new A.aE("Posizione",null,B.bO,null,null,null,null,null,null,null)
 B.Kx=new A.wM(B.a3X,!1)
 B.Ky=new A.CX(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -114833,8 +114833,8 @@ B.ll=new A.QC(0,"down")
 B.a4=new A.QC(1,"start")
 B.KR=new A.QE(null)
 B.KS=new A.Dg(null,null,null,null,null,null,null,null,null)
-B.a4i=new A.aE("Tutte",null,null,null,null,null,null,null,null,null)
-B.qr=new A.hl(null,B.a4i,B.cz,null,t.b7)
+B.a4h=new A.aE("Tutte",null,null,null,null,null,null,null,null,null)
+B.qr=new A.hl(null,B.a4h,B.cz,null,t.b7)
 B.KT=new A.Dh(null,null,null,null)
 B.D=new A.aI(0)
 B.b0=new A.aI(1e5)
@@ -114997,8 +114997,8 @@ B.c1=new A.R8(0,"tight")
 B.LR=new A.iz(1,B.c1,B.fn,null)
 B.cw=new A.u(!0,B.j,null,null,null,null,12,B.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.ca=new A.nw(1,"right")
-B.a4r=new A.aE("Totale ",null,B.cw,B.ca,null,null,null,null,null,null)
-B.LV=new A.iz(1,B.c1,B.a4r,null)
+B.a4q=new A.aE("Totale ",null,B.cw,B.ca,null,null,null,null,null,null)
+B.LV=new A.iz(1,B.c1,B.a4q,null)
 B.LW=new A.Dy(null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.iq=new A.mu(!1,!1,!1,!1)
 B.ir=new A.mu(!1,!1,!1,!0)
@@ -116772,30 +116772,30 @@ B.Cb=new A.yx(2,"bubble")
 B.hf=new A.iS(null,null)
 B.bH=new A.auY(1,"down")
 B.a35=new A.u(!0,B.hX,null,null,null,null,18,B.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a4D=new A.aE("*",null,B.a35,null,null,null,null,null,null,null)
+B.a4C=new A.aE("*",null,B.a35,null,null,null,null,null,null,null)
 B.c8=new A.bS(8,null,null,null)
 B.J3=new A.z(1,0.5411764705882353,0.3254901960784314,0,B.e)
 B.a_c=new A.u(!0,B.J3,null,null,null,null,12,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a4J=new A.aE("Punteggio validato dal tavolo della giuria. Potrebbe differire da quello inviato dal tavolo con l'app.",null,B.a_c,null,null,null,null,null,null,null)
-B.LU=new A.iz(1,B.c1,B.a4J,null)
-B.PB=s([B.a4D,B.c8,B.LU],t.p)
+B.a4I=new A.aE("Punteggio validato dal tavolo della giuria. Potrebbe differire da quello inviato dal tavolo con l'app.",null,B.a_c,null,null,null,null,null,null,null)
+B.LU=new A.iz(1,B.c1,B.a4I,null)
+B.PB=s([B.a4C,B.c8,B.LU],t.p)
 B.Wi=new A.pF(B.aB,B.m,B.p,B.q,null,B.bH,null,0,B.PB,null)
 B.qS=new A.iz(1,B.c1,B.qq,null)
 B.Lq=new A.ah(12,0,12,0)
-B.a4v=new A.aE("oppure",null,B.cX,null,null,null,null,null,null,null)
-B.UF=new A.b8(B.Lq,B.a4v,null)
+B.a4u=new A.aE("oppure",null,B.cX,null,null,null,null,null,null,null)
+B.UF=new A.b8(B.Lq,B.a4u,null)
 B.PU=s([B.qS,B.UF,B.qS],t.p)
 B.Wj=new A.pF(B.aB,B.m,B.p,B.q,null,B.bH,null,0,B.PU,null)
 B.Mu=new A.bh(58287,"MaterialIcons",!1)
 B.N7=new A.cs(B.Mu,null,B.b1,null,null)
-B.a47=new A.aE("Iscrizioni online chiuse: non \xe8 pi\xf9 possibile registrarsi a questo torneo.",null,null,null,null,null,null,null,null,null)
-B.LT=new A.iz(1,B.c1,B.a47,null)
+B.a46=new A.aE("Iscrizioni online chiuse: non \xe8 pi\xf9 possibile registrarsi a questo torneo.",null,null,null,null,null,null,null,null,null)
+B.LT=new A.iz(1,B.c1,B.a46,null)
 B.Pa=s([B.N7,B.c8,B.LT],t.p)
 B.Wk=new A.pF(B.aB,B.m,B.p,B.q,null,B.bH,null,0,B.Pa,null)
-B.a4I=new A.aE("T",null,B.cw,null,null,null,null,null,null,null)
-B.Yz=new A.bS(22,null,B.a4I,null)
-B.a4e=new A.aE("Avversari",null,B.cw,null,null,null,null,null,null,null)
-B.LS=new A.iz(1,B.c1,B.a4e,null)
+B.a4H=new A.aE("T",null,B.cw,null,null,null,null,null,null,null)
+B.Yz=new A.bS(22,null,B.a4H,null)
+B.a4d=new A.aE("Avversari",null,B.cw,null,null,null,null,null,null,null)
+B.LS=new A.iz(1,B.c1,B.a4d,null)
 B.E6=new A.aE("MP",null,B.cw,B.F,null,null,null,null,null,null)
 B.YA=new A.bS(44,null,B.E6,null)
 B.E8=new A.aE("VP",null,B.cw,B.F,null,null,null,null,null,null)
@@ -117068,8 +117068,8 @@ B.IH=new A.k_(2,null,null,null,null,B.j,null,null,null,null)
 B.YB=new A.bS(18,18,B.IH,null)
 B.II=new A.k_(6,null,null,null,null,B.y,null,null,null,null)
 B.YC=new A.bS(72,72,B.II,null)
-B.a4F=new A.aE("Pos",null,B.cw,null,null,null,null,null,null,null)
-B.Dh=new A.bS(34,null,B.a4F,null)
+B.a4E=new A.aE("Pos",null,B.cw,null,null,null,null,null,null,null)
+B.Dh=new A.bS(34,null,B.a4E,null)
 B.Di=new A.bS(56,null,B.E6,null)
 B.Dj=new A.bS(44,null,B.E8,null)
 B.dY=new A.bS(null,10,null,null)
@@ -117103,10 +117103,10 @@ B.YM=new A.lz(5,"timeout")
 B.YN=new A.yU(null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.a42=new A.aE("Apri l'app Fotocamera del telefono e inquadra il QR del circolo.",null,null,null,null,null,null,null,null,null)
 B.YO=new A.nr(B.a42,null,null,null,null,null,null,null,null,null,null,null,null,B.d3,!1,null,null,null,B.P,null)
-B.a4p=new A.aE("\u2705 Circolo aggiornato!",null,null,null,null,null,null,null,null,null)
-B.YP=new A.nr(B.a4p,B.eA,null,null,null,null,null,null,null,null,null,null,null,B.qv,!1,null,null,null,B.P,null)
-B.a4k=new A.aE("Dettaglio non disponibile per questo turno",null,null,null,null,null,null,null,null,null)
-B.YQ=new A.nr(B.a4k,null,null,null,null,null,null,null,B.hr,null,null,null,null,B.dy,!1,null,null,null,B.P,null)
+B.a4o=new A.aE("\u2705 Circolo aggiornato!",null,null,null,null,null,null,null,null,null)
+B.YP=new A.nr(B.a4o,B.eA,null,null,null,null,null,null,null,null,null,null,null,B.qv,!1,null,null,null,B.P,null)
+B.a4j=new A.aE("Dettaglio non disponibile per questo turno",null,null,null,null,null,null,null,null,null)
+B.YQ=new A.nr(B.a4j,null,null,null,null,null,null,null,B.hr,null,null,null,null,B.dy,!1,null,null,null,B.P,null)
 B.Dt=new A.Hw(0,"permissive")
 B.YR=new A.Hw(1,"normal")
 B.YS=new A.Hw(2,"forced")
@@ -117560,46 +117560,46 @@ B.a1J=new A.u(!0,null,null,null,null,null,11,null,null,null,null,null,null,null,
 B.a44=new A.aE("Iscrizioni chiuse",null,B.a1J,null,null,null,null,null,null,null)
 B.a0w=new A.u(!0,null,null,null,null,null,26,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.a45=new A.aE("\ud83c\udfc1 ",null,B.a0w,null,null,null,null,null,null,null)
-B.a46=new A.aE("Hai la 2.0.2. Scarica quella nuova e installala sopra: i tuoi dati restano.",null,B.nZ,null,null,null,null,null,null,null)
-B.a48=new A.aE("Il tuo circolo ti mostra o ti manda un QR code (sul foglio di gioco, su un cartello, o via chat). Inquadralo con la fotocamera: da quel momento resterai collegato a questo circolo automaticamente, senza doverlo rifare.",null,B.cX,B.F,null,null,null,null,null,null)
+B.a47=new A.aE("Il tuo circolo ti mostra o ti manda un QR code (sul foglio di gioco, su un cartello, o via chat). Inquadralo con la fotocamera: da quel momento resterai collegato a questo circolo automaticamente, senza doverlo rifare.",null,B.cX,B.F,null,null,null,null,null,null)
 B.a1c=new A.u(!0,B.j,null,null,null,null,null,B.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a49=new A.aE("USA",null,B.a1c,null,null,null,null,null,null,null)
-B.a4a=new A.aE("Suono e volume degli avvisi (apertura del torneo, cambio turno, risultato dell'avversario).",null,B.hy,null,null,null,null,null,null,null)
-B.a4b=new A.aE("Ricarica ora",null,null,null,null,null,null,null,null,null)
-B.a4c=new A.aE("Iscrizione inviata",null,null,null,null,null,null,null,null,null)
-B.a4d=new A.aE("\u2014",null,null,null,null,null,null,null,null,null)
+B.a48=new A.aE("USA",null,B.a1c,null,null,null,null,null,null,null)
+B.a49=new A.aE("Suono e volume degli avvisi (apertura del torneo, cambio turno, risultato dell'avversario).",null,B.hy,null,null,null,null,null,null,null)
+B.a4a=new A.aE("Ricarica ora",null,null,null,null,null,null,null,null,null)
+B.a4b=new A.aE("Iscrizione inviata",null,null,null,null,null,null,null,null,null)
+B.a4c=new A.aE("\u2014",null,null,null,null,null,null,null,null,null)
 B.a2i=new A.u(!0,B.kN,null,null,null,null,13,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a4f=new A.aE("\u23f3 Vincitori non ancora pubblicati dall'organizzatore",null,B.a2i,B.F,null,null,null,null,null,null)
-B.a4g=new A.aE("Controlla il tuo torneo o scopri quali sono i prossimi tornei in programma",null,B.hy,B.F,null,null,null,null,null,null)
+B.a4e=new A.aE("\u23f3 Vincitori non ancora pubblicati dall'organizzatore",null,B.a2i,B.F,null,null,null,null,null,null)
+B.a4f=new A.aE("Controlla il tuo torneo o scopri quali sono i prossimi tornei in programma",null,B.hy,B.F,null,null,null,null,null,null)
 B.a2_=new A.u(!0,B.eA,null,null,null,null,null,B.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a4h=new A.aE("Torneo concluso",null,B.a2_,null,null,null,null,null,null,null)
-B.a4j=new A.aE("Password dimenticata?",null,null,null,null,null,null,null,null,null)
-B.a4l=new A.aE("Cambia circolo",null,null,null,null,null,null,null,null,null)
+B.a4g=new A.aE("Torneo concluso",null,B.a2_,null,null,null,null,null,null,null)
+B.a4i=new A.aE("Password dimenticata?",null,null,null,null,null,null,null,null,null)
+B.a4k=new A.aE("Cambia circolo",null,null,null,null,null,null,null,null,null)
 B.a1P=new A.u(!0,B.b1,null,null,null,null,20,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a4m=new A.aE("\u2014",null,B.a1P,null,null,null,null,null,null,null)
-B.a4n=new A.aE("Aggiorna",null,null,null,null,null,null,null,null,null)
-B.a4q=new A.aE("Sei gi\xe0 al circolo per giocare o vuoi fare una prenotazione?",null,B.o0,B.F,null,null,null,null,null,null)
-B.a4s=new A.aE("Vedi i premi",null,B.jN,null,null,null,null,null,null,null)
-B.a4t=new A.aE("Attivo ora",null,B.E5,null,null,null,null,null,null,null)
-B.a4u=new A.aE("Tornei aperti alle iscrizioni",null,null,null,null,null,null,null,null,null)
+B.a4l=new A.aE("\u2014",null,B.a1P,null,null,null,null,null,null,null)
+B.a4m=new A.aE("Aggiorna",null,null,null,null,null,null,null,null,null)
+B.a4p=new A.aE("Sei gi\xe0 al circolo per giocare o vuoi fare una prenotazione?",null,B.o0,B.F,null,null,null,null,null,null)
+B.a4r=new A.aE("Vedi i premi",null,B.jN,null,null,null,null,null,null,null)
+B.a4s=new A.aE("Attivo ora",null,B.E5,null,null,null,null,null,null,null)
+B.a4t=new A.aE("Tornei aperti alle iscrizioni",null,null,null,null,null,null,null,null,null)
 B.a2x=new A.u(!0,null,null,null,null,null,20,B.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a4w=new A.aE("Connetti il tuo circolo",null,B.a2x,null,null,null,null,null,null,null)
-B.a4x=new A.aE("Numeri in rosso",null,null,null,null,null,null,null,null,null)
+B.a4v=new A.aE("Connetti il tuo circolo",null,B.a2x,null,null,null,null,null,null,null)
+B.a4w=new A.aE("Numeri in rosso",null,null,null,null,null,null,null,null,null)
 B.a08=new A.u(!0,B.y,null,null,null,null,16,B.cL,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a4y=new A.aE("Il tuo torneo di Burraco a portata di mano",null,B.a08,B.F,null,null,null,null,null,null)
-B.a4z=new A.aE("Iscrizione inviata. Appena il circolo la riceve ti arriva una notifica; puoi sempre controllarla in \xabLe mie iscrizioni\xbb.",null,null,null,null,null,null,null,null,null)
-B.a4B=new A.aE("Usa comunque",null,null,null,null,null,null,null,null,null)
-B.a4C=new A.aE("Torna indietro",null,null,null,null,null,null,null,null,null)
-B.a4E=new A.aE("Dopo aver inquadrato il QR, torna in questa app: proseguir\xe0 da sola.",null,B.hw,B.F,null,null,null,null,null,null)
-B.a4G=new A.aE("Pi\xf9 tardi",null,null,null,null,null,null,null,null,null)
-B.a4H=new A.aE("Impostazioni",null,B.hx,null,null,null,null,null,null,null)
+B.a4x=new A.aE("Il tuo torneo di Burraco a portata di mano",null,B.a08,B.F,null,null,null,null,null,null)
+B.a4y=new A.aE("Iscrizione inviata. Appena il circolo la riceve ti arriva una notifica; puoi sempre controllarla in \xabLe mie iscrizioni\xbb.",null,null,null,null,null,null,null,null,null)
+B.a4A=new A.aE("Usa comunque",null,null,null,null,null,null,null,null,null)
+B.a4B=new A.aE("Torna indietro",null,null,null,null,null,null,null,null,null)
+B.a4D=new A.aE("Dopo aver inquadrato il QR, torna in questa app: proseguir\xe0 da sola.",null,B.hw,B.F,null,null,null,null,null,null)
+B.a4F=new A.aE("Pi\xf9 tardi",null,null,null,null,null,null,null,null,null)
+B.a4G=new A.aE("Impostazioni",null,B.hx,null,null,null,null,null,null,null)
 B.E7=new A.aE("Riprova",null,null,null,null,null,null,null,null,null)
-B.a4K=new A.aE("Risultato partita",null,B.eY,null,null,null,null,null,null,null)
-B.a4L=new A.aE("Prova suono",null,null,null,null,null,null,null,null,null)
+B.a4J=new A.aE("Risultato partita",null,B.eY,null,null,null,null,null,null,null)
+B.a4K=new A.aE("Prova suono",null,null,null,null,null,null,null,null,null)
 B.a0I=new A.u(!0,B.cO,null,null,null,null,18,B.E,null,null,null,null,null,null,null,null,null,B.i,null,null,null,null,null,null,null,null)
-B.a4M=new A.aE("\u274c Errore interno app",null,B.a0I,null,null,null,null,null,null,null)
-B.a4O=new A.aE("Le mie",null,null,null,null,null,null,null,null,null)
-B.a4P=new A.aE("La classifica sar\xe0 disponibile\ndopo la chiusura del primo turno.",null,B.E2,B.F,null,null,null,null,null,null)
+B.a4L=new A.aE("\u274c Errore interno app",null,B.a0I,null,null,null,null,null,null,null)
+B.a4N=new A.aE("Le mie",null,null,null,null,null,null,null,null,null)
+B.a4O=new A.aE("La classifica sar\xe0 disponibile\ndopo la chiusura del primo turno.",null,B.E2,B.F,null,null,null,null,null,null)
+B.a4P=new A.aE("Hai la 2.3.1. Scarica quella nuova e installala sopra: i tuoi dati restano.",null,B.nZ,null,null,null,null,null,null,null)
 B.a4Q=new A.aE("In attesa del torneo",null,null,null,null,null,null,null,null,null)
 B.a4R=new A.aE("Usa un altro account",null,null,null,null,null,null,null,null,null)
 B.a0b=new A.u(!0,null,null,null,null,null,18,B.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
