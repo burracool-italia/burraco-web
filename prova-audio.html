@@ -85,7 +85,7 @@
           .then(function (d) { return new Promise(function (ok, ko) { a.decodeAudioData(d, ok, ko); }); });
       }).then(function (b) {
         bufApp = b;
-        if (a.state !== 'running') { log(quale + ') NON attivo -> l'app userebbe il vecchio lettore'); return; }
+        if (a.state !== 'running') { log(quale + ') NON attivo -> l app userebbe il vecchio lettore'); return; }
         var src = a.createBufferSource(); src.buffer = b;
         var g = a.createGain(); g.gain.value = vol;
         src.connect(g); g.connect(a.destination); src.start(0);
