@@ -78,13 +78,37 @@
     // volume passa da un "GainNode" del Web Audio, che i browser rispettano. Falso = non riuscito
     // (l'app allora usa il lettore normale).
     var burracoSuoniCache = {};
+    // 25/11/2026: l'iPhone avvia l'audio solo DENTRO un tocco dello schermo. Il suono di prova partiva
+    // dopo il salvataggio del volume (fuori dal tocco) e veniva rifiutato: l'app ripiegava sul lettore
+    // normale, sempre a volume pieno. Qui l'audio si sblocca a ogni tocco finche' non e' attivo (anche
+    // dopo che l'iPhone lo sospende, es. app in secondo piano): poi gli avvisi suonano col volume scelto.
+    function burracoSbloccaAudio() {
+      try {
+        var C = window.AudioContext || window.webkitAudioContext;
+        if (!C) return;
+        if (!window.burracoAC) window.burracoAC = new C();
+        var ac = window.burracoAC;
+        if (ac.state === 'running') return;
+        ac.resume();
+        var src = ac.createBufferSource();          // un suono vuoto: e' quello che sblocca l'iPhone
+        src.buffer = ac.createBuffer(1, 1, 22050);
+        src.connect(ac.destination);
+        src.start(0);
+      } catch (e) {}
+    }
+    ['touchend', 'pointerup', 'mouseup', 'click', 'keydown'].forEach(function (ev) {
+      document.addEventListener(ev, burracoSbloccaAudio, true);
+    });
     function burracoSuona(url, volume) {
       try {
         var C = window.AudioContext || window.webkitAudioContext;
         if (!C) return Promise.resolve(false);
         if (!window.burracoAC) window.burracoAC = new C();
         var ac = window.burracoAC;
-        var pronto = ac.state === 'suspended' ? ac.resume() : Promise.resolve();
+        // fuori da un tocco l'iPhone puo' lasciare resume() in sospeso per sempre: si aspetta al massimo 1,5 s
+        var pronto = ac.state !== 'running'
+          ? Promise.race([ac.resume(), new Promise(function (ok) { setTimeout(ok, 1500); })])
+          : Promise.resolve();
         return pronto.then(function () {
           if (burracoSuoniCache[url]) return burracoSuoniCache[url];
           return fetch(url).then(function (r) { return r.arrayBuffer(); }).then(function (dati) {

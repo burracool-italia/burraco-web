@@ -8440,7 +8440,7 @@ m=A.c6("https://web-production-c734e.up.railway.app/accesso",0,null)
 i=t.N
 h=A.a4(["Content-Type","application/json","Authorization","Bearer "+n],i,i)
 s=8
-return A.h(A.NT(m,B.U.nl(A.a4(["tipo","web","sistema",k,"nome",j.c.a.c,"versione","2.3.4","pro",!1,"sulla_home",A.b_8()],i,t.X),null),h).dl(B.dx),$async$Ol)
+return A.h(A.NT(m,B.U.nl(A.a4(["tipo","web","sistema",k,"nome",j.c.a.c,"versione","2.3.5","pro",!1,"sulla_home",A.b_8()],i,t.X),null),h).dl(B.dx),$async$Ol)
 case 8:p=2
 s=6
 break
@@ -50239,7 +50239,7 @@ default:return"Vai al "+r}},
 K(a){var s,r=this,q=null
 if(r.at!=null)return A.TE(!1,A.kn(q,B.y,A.i4(!0,A.xu(new A.awc(r)),B.a2,!0)),new A.awd(r),t.K)
 s=A.ho(q,q,B.rk,q,q,r.ga_I(),q,q,"Indietro")
-return A.TE(!1,A.kn(A.qV(A.b([A.ho(q,q,B.ey,q,q,r.gUX(),q,q,q),A.ho(q,q,B.mj,q,q,r.gagj(),q,q,q),A.ho(q,q,B.mi,q,q,r.gapE(),q,q,q)],t.p),B.y,q,q,B.j,s,B.a4G),B.Jf,A.i4(!0,A.xu(new A.awe(r)),B.a2,!1)),new A.awf(r),t.K)}}
+return A.TE(!1,A.kn(A.qV(A.b([A.ho(q,q,B.ey,q,q,r.gUX(),q,q,q),A.ho(q,q,B.mj,q,q,r.gagj(),q,q,q),A.ho(q,q,B.mi,q,q,r.gapE(),q,q,q)],t.p),B.y,q,q,B.j,s,B.a4F),B.Jf,A.i4(!0,A.xu(new A.awe(r)),B.a2,!1)),new A.awf(r),t.K)}}
 A.aw2.prototype={
 $1(a){return a.h(0,"url")===this.a.a.d},
 $S:57}
@@ -50361,7 +50361,7 @@ h=J.ad(k,"android")
 j=B.c.aF(J.bD(h==null?"":h))
 h=J.ad(k,"url")
 i=B.c.aF(J.bD(h==null?"":h))
-if(J.bC(j)===0||!A.baj(j,"2.3.4")){s=1
+if(J.bC(j)===0||!A.baj(j,"2.3.5")){s=1
 break}if(n.c==null){s=1
 break}n.J(new A.awr(n,j,i))
 p=2
@@ -50400,7 +50400,7 @@ r=A.bN(10)
 q=t.p
 n=A.c5(A.b([A.fk(B.MB,B.ei,o,o),B.c8,A.cw(A.a6("\xc8 disponibile la versione "+n+" dell'app",o,o,o,o,B.bO,o,o))],q),B.q,B.m,B.p,0,o)
 p=A.ns(B.a4v,new A.awv(this),o)
-return A.bZ(o,A.bO(A.b([n,B.bG,B.a4C,A.c5(A.b([p,new A.QQ(!0,this.gatn(),o,o,o,o,B.n,o,!1,o,!0,o,new A.ZG(B.a3B,B.Nc,o,o,o),o)],q),B.q,B.h7,B.p,0,o)],q),B.al,B.m,B.p),B.n,o,o,new A.bQ(B.i0,o,s,r,o,o,B.O),o,o,o,B.qz,B.Lk,o,o,1/0)}}
+return A.bZ(o,A.bO(A.b([n,B.bG,B.a4G,A.c5(A.b([p,new A.QQ(!0,this.gatn(),o,o,o,o,B.n,o,!1,o,!0,o,new A.ZG(B.a3B,B.Nc,o,o,o),o)],q),B.q,B.h7,B.p,0,o)],q),B.al,B.m,B.p),B.n,o,o,new A.bQ(B.i0,o,s,r,o,o,B.O),o,o,o,B.qz,B.Lk,o,o,1/0)}}
 A.aws.prototype={
 $1(a){var s=t.OL
 s=A.U(new A.a5(A.b(a.split("."),t.s),new A.awt(),s),s.i("am.E"))
@@ -50923,7 +50923,7 @@ s=m.y
 r=A.fk(s?B.Mr:B.rd,l,l,l)
 j=A.mo(r,A.a6(s?k:"Entra",l,l,l,l,B.hx,l,l),m.gavg(),j)}i.push(j)
 i.push(B.cU)
-i.push(A.a6("Versione 2.3.4  \xb7  build 25/11/2026 18:10",l,l,l,l,A.bz(l,l,B.bY,l,l,l,l,l,l,l,l,11,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),l,l))
+i.push(A.a6("Versione 2.3.5  \xb7  build 25/11/2026 18:45",l,l,l,l,A.bz(l,l,B.bY,l,l,l,l,l,l,l,l,11,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),l,l))
 return A.kn(l,l,A.i4(!0,A.lu(A.bO(i,B.q,B.c4,B.p),l,B.a4,B.bK,l,B.ai),B.a2,!0))},
 a_j(a,b,c){var s=null,r=A.bN(8),q=b?B.y:B.C,p=A.bN(8)
 return A.hr(!1,B.N,!0,s,A.mI(!1,r,!0,A.aSj(A.a6(a,s,s,s,s,A.bz(s,s,b?B.j:B.y,s,s,s,s,s,s,s,s,s,s,s,B.cL,s,s,!0,s,s,s,s,s,s,s,s),B.F,s),new A.bQ(q,s,s,p,s,s,B.O),B.bD,s,B.qC),s,!0,s,s,s,s,s,s,s,s,s,c,s,s,s,s,s,s,s),B.n,B.C,0,s,s,s,s,s,B.cP)}}
@@ -52743,7 +52743,7 @@ if(s==null)s=r
 else{s=s.h(0,"coppia")
 s=s==null?r:J.ad(s,"id")}return s},
 agO(){var s,r,q,p,o,n,m,l,k,j,i,h,g=this,f=null
-if(J.fU(g.fx))return g.qi(A.e4(new A.b8(B.bK,A.bO(A.b([A.fk(B.MK,B.bY,f,52),B.af,B.a4F],t.p),B.q,B.m,B.aN),f),f,f))
+if(J.fU(g.fx))return g.qi(A.e4(new A.b8(B.bK,A.bO(A.b([A.fk(B.MK,B.bY,f,52),B.af,B.a4E],t.p),B.q,B.m,B.aN),f),f,f))
 s=g.gXS()
 r=g.fy==="giallo"?"Giocatore":"Coppia"
 q=t.p
@@ -54229,7 +54229,7 @@ K(a){var s,r,q,p,o,n,m,l,k,j,i=this,h=null,g=J.qM(i.d,new A.aKd()),f=A.U(g,g.$ti
 if(i.r.length===0)s=f
 else{g=A.a_(f).i("aH<1>")
 s=A.U(new A.aH(f,new A.aKe(i),g),g.i("E.E"))}g=t.p
-r=A.qV(A.b([A.aPJ(B.N0,B.a4E,new A.aKf(a),A.aPK(h,h,h,h,h,h,h,h,h,B.j,h,h,h,h,h,h,h,h,h,h))],g),B.y,h,h,B.j,h,B.a4j)
+r=A.qV(A.b([A.aPJ(B.N0,B.a4D,new A.aKf(a),A.aPK(h,h,h,h,h,h,h,h,h,B.j,h,h,h,h,h,h,h,h,h,h))],g),B.y,h,h,B.j,h,B.a4j)
 q=A.a6("Iscriviti a un torneo aperto di qualsiasi circolo \u2014 anche per te e per uno o pi\xf9 compagni in un colpo solo.",h,h,h,h,A.bz(h,h,B.c_,h,h,h,h,h,h,h,h,12,h,h,h,h,h,!0,h,h,h,h,h,h,h,h),h,h)
 p=A.ib(h,h,B.NB,h,h,1,!1,new A.aKg(i),h,!1,h,B.aa,B.bz)
 o=i.w
@@ -114568,8 +114568,8 @@ B.E=new A.hR(700)
 B.bO=new A.u(!0,null,null,null,null,null,null,B.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.a3J=new A.aE("Vincitore",null,B.bO,null,null,null,null,null,null,null)
 B.Km=new A.wI(B.a3J,!1)
-B.a4D=new A.aE("Premio",null,B.bO,null,null,null,null,null,null,null)
-B.Kn=new A.wI(B.a4D,!0)
+B.a4C=new A.aE("Premio",null,B.bO,null,null,null,null,null,null,null)
+B.Kn=new A.wI(B.a4C,!0)
 B.a3N=new A.aE("Posizione",null,B.bO,null,null,null,null,null,null,null)
 B.Ko=new A.wI(B.a3N,!1)
 B.Kp=new A.CP(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -117384,10 +117384,10 @@ B.a4z=new A.aE("Risultato partita",null,B.eY,null,null,null,null,null,null,null)
 B.a4A=new A.aE("Prova suono",null,null,null,null,null,null,null,null,null)
 B.a0y=new A.u(!0,B.cO,null,null,null,null,18,B.E,null,null,null,null,null,null,null,null,null,B.i,null,null,null,null,null,null,null,null)
 B.a4B=new A.aE("\u274c Errore interno app",null,B.a0y,null,null,null,null,null,null,null)
-B.a4C=new A.aE("Hai la 2.3.4. Scarica quella nuova e installala sopra: i tuoi dati restano.",null,B.nY,null,null,null,null,null,null,null)
-B.a4E=new A.aE("Le mie",null,null,null,null,null,null,null,null,null)
-B.a4F=new A.aE("La classifica sar\xe0 disponibile\ndopo la chiusura del primo turno.",null,B.E1,B.F,null,null,null,null,null,null)
-B.a4G=new A.aE("In attesa del torneo",null,null,null,null,null,null,null,null,null)
+B.a4D=new A.aE("Le mie",null,null,null,null,null,null,null,null,null)
+B.a4E=new A.aE("La classifica sar\xe0 disponibile\ndopo la chiusura del primo turno.",null,B.E1,B.F,null,null,null,null,null,null)
+B.a4F=new A.aE("In attesa del torneo",null,null,null,null,null,null,null,null,null)
+B.a4G=new A.aE("Hai la 2.3.5. Scarica quella nuova e installala sopra: i tuoi dati restano.",null,B.nY,null,null,null,null,null,null,null)
 B.a4H=new A.aE("Usa un altro account",null,null,null,null,null,null,null,null,null)
 B.a01=new A.u(!0,null,null,null,null,null,18,B.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.E8=new A.aE("Entra nella partita",null,B.a01,null,null,null,null,null,null,null)
