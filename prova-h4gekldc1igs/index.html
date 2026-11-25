@@ -73,6 +73,38 @@
       } catch (e) {}
       return Promise.resolve(ricordata);
     }
+    // 25/11/2026: suoni degli avvisi con il volume scelto nelle Impostazioni. Con il normale
+    // elemento audio il volume veniva ignorato (Android dall'icona sulla Home, iPhone): qui il
+    // volume passa da un "GainNode" del Web Audio, che i browser rispettano. Falso = non riuscito
+    // (l'app allora usa il lettore normale).
+    var burracoSuoniCache = {};
+    function burracoSuona(url, volume) {
+      try {
+        var C = window.AudioContext || window.webkitAudioContext;
+        if (!C) return Promise.resolve(false);
+        if (!window.burracoAC) window.burracoAC = new C();
+        var ac = window.burracoAC;
+        var pronto = ac.state === 'suspended' ? ac.resume() : Promise.resolve();
+        return pronto.then(function () {
+          if (burracoSuoniCache[url]) return burracoSuoniCache[url];
+          return fetch(url).then(function (r) { return r.arrayBuffer(); }).then(function (dati) {
+            return new Promise(function (ok, ko) { ac.decodeAudioData(dati, ok, ko); });
+          }).then(function (buf) { burracoSuoniCache[url] = buf; return buf; });
+        }).then(function (buf) {
+          if (ac.state !== 'running') return false;
+          var src = ac.createBufferSource();
+          src.buffer = buf;
+          var g = ac.createGain();
+          g.gain.value = volume;
+          src.connect(g);
+          g.connect(ac.destination);
+          src.start(0);
+          return true;
+        }).catch(function () { return false; });
+      } catch (e) {
+        return Promise.resolve(false);
+      }
+    }
   </script>
 </head>
 <body>
