@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/burraco-web/prova-h4gekldc1igs/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Il tuo torneo di burraco: tavolo, risultati e classifica.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Burraco">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Burraco - Il tuo torneo</title>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    // Niente invito automatico del browser a installare l'app (Chrome su Android).
+    window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); });
+    // Vero se la pagina e' aperta dall'icona sulla schermata Home (Android: display-mode
+    // standalone; iPhone: navigator.standalone). Usato per mostrare o no l'invito a installarla.
+    function burracoSullaHome() {
+      try {
+        return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+               window.navigator.standalone === true;
+      } catch (e) { return false; }
+    }
+
+    // L'icona sulla schermata Home e' gia' stata creata? Serve a NON riproporre l'invito a chi apre la
+    // pagina dal browser dopo averla gia' installata. Lo sa dire solo Chrome su Android
+    // (getInstalledRelatedApps, con "related_applications" nel manifest); in piu' si ricorda in
+    // localStorage quando l'icona viene creata (evento appinstalled) o quando la pagina viene aperta
+    // dall'icona. Su iPhone Safari non offre nulla: li' risponde sempre "non lo so" (falso).
+    var BURRACO_CHIAVE_ICONA = 'burraco_icona_creata';
+    function burracoRicordaIcona(creata) {
+      try {
+        if (creata) localStorage.setItem(BURRACO_CHIAVE_ICONA, '1');
+        else localStorage.removeItem(BURRACO_CHIAVE_ICONA);
+      } catch (e) {}
+    }
+    window.addEventListener('appinstalled', function () { burracoRicordaIcona(true); });
+    if (burracoSullaHome()) burracoRicordaIcona(true);
+    function burracoIconaGiaCreata() {
+      var ricordata = false;
+      try { ricordata = localStorage.getItem(BURRACO_CHIAVE_ICONA) === '1'; } catch (e) {}
+      try {
+        if (navigator.getInstalledRelatedApps) {
+          return navigator.getInstalledRelatedApps().then(function (app) {
+            var creata = !!(app && app.length);
+            burracoRicordaIcona(creata);      // il browser lo sa di sicuro: vale la sua risposta
+            return creata;
+          }).catch(function () { return ricordata; });
+        }
+      } catch (e) {}
+      return Promise.resolve(ricordata);
+    }
+    // 28/11/2026: permesso delle notifiche. L'app lo chiedeva da sola all'apertura della partita,
+    // senza un tocco del giocatore: Safari su iPhone ignora quella richiesta e Chrome su Android
+    // spesso la riduce a una campanella nascosta. Ora lo chiede il pulsante «Attiva le notifiche»,
+    // chiamando questa funzione direttamente dentro il tocco.
+    // Stato: 'granted' / 'denied' / 'default' (mai chiesto) / 'nonsupportate'.
+    function burracoStatoNotifiche() {
+      try {
+        if (!('Notification' in window)) return 'nonsupportate';
+        return Notification.permission;
+      } catch (e) { return 'nonsupportate'; }
+    }
+    function burracoChiediNotifiche() {
+      try {
+        if (!('Notification' in window)) return Promise.resolve('nonsupportate');
+        var r = Notification.requestPermission();
+        if (r && r.then) return r.then(function (s) { return s || Notification.permission; });
+        return Promise.resolve(Notification.permission);
+      } catch (e) { return Promise.resolve(burracoStatoNotifiche()); }
+    }
+    // 25/11/2026: suoni degli avvisi con il volume scelto nelle Impostazioni. Con il normale
+    // elemento audio il volume veniva ignorato (Android dall'icona sulla Home, iPhone): qui il
+    // volume passa da un "GainNode" del Web Audio, che i browser rispettano. Falso = non riuscito
+    // (l'app allora usa il lettore normale).
+    var burracoSuoniCache = {};
+    // 25/11/2026: l'iPhone avvia l'audio solo DENTRO un tocco dello schermo. Il suono di prova partiva
+    // dopo il salvataggio del volume (fuori dal tocco) e veniva rifiutato: l'app ripiegava sul lettore
+    // normale, sempre a volume pieno. Qui l'audio si sblocca a ogni tocco finche' non e' attivo (anche
+    // dopo che l'iPhone lo sospende, es. app in secondo piano): poi gli avvisi suonano col volume scelto.
+    function burracoSbloccaAudio() {
+      try {
+        var C = window.AudioContext || window.webkitAudioContext;
+        if (!C) return;
+        if (!window.burracoAC) window.burracoAC = new C();
+        var ac = window.burracoAC;
+        if (ac.state === 'running') return;
+        ac.resume();
+        var src = ac.createBufferSource();          // un suono vuoto: e' quello che sblocca l'iPhone
+        src.buffer = ac.createBuffer(1, 1, 22050);
+        src.connect(ac.destination);
+        src.start(0);
+      } catch (e) {}
+    }
+    ['touchend', 'pointerup', 'mouseup', 'click', 'keydown'].forEach(function (ev) {
+      document.addEventListener(ev, burracoSbloccaAudio, true);
+    });
+    function burracoSuona(url, volume) {
+      try {
+        var C = window.AudioContext || window.webkitAudioContext;
+        if (!C) return Promise.resolve(false);
+        if (!window.burracoAC) window.burracoAC = new C();
+        var ac = window.burracoAC;
+        // fuori da un tocco l'iPhone puo' lasciare resume() in sospeso per sempre: si aspetta al massimo 1,5 s
+        var pronto = ac.state !== 'running'
+          ? Promise.race([ac.resume(), new Promise(function (ok) { setTimeout(ok, 1500); })])
+          : Promise.resolve();
+        return pronto.then(function () {
+          if (burracoSuoniCache[url]) return burracoSuoniCache[url];
+          return fetch(url).then(function (r) { return r.arrayBuffer(); }).then(function (dati) {
+            return new Promise(function (ok, ko) { ac.decodeAudioData(dati, ok, ko); });
+          }).then(function (buf) { burracoSuoniCache[url] = buf; return buf; });
+        }).then(function (buf) {
+          if (ac.state !== 'running') return false;
+          var src = ac.createBufferSource();
+          src.buffer = buf;
+          var g = ac.createGain();
+          g.gain.value = volume;
+          src.connect(g);
+          g.connect(ac.destination);
+          src.start(0);
+          return true;
+        }).catch(function () { return false; });
+      } catch (e) {
+        return Promise.resolve(false);
+      }
+    }
+  </script>
+</head>
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
