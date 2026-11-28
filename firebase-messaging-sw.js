@@ -21,6 +21,39 @@ self.addEventListener('notificationclick', function (event) {
   );
 });
 
+// 28/11/2026: arrivo di una notifica. Firebase NON la mostra se una pagina del sito risulta
+// "visibile", anche quando il telefono ha lo schermo bloccato con l'app lasciata in primo piano:
+// il giocatore sentiva solo il suono dell'app (se la pagina era ancora viva) e non vedeva nessuna
+// notifica. Qui la si mostra sempre, tranne quando la pagina e' visibile E in uso (focused): in quel
+// caso basta l'avviso dell'app e si lascia fare a Firebase come prima. Le opzioni sono quelle
+// mandate dal server (vibrazione, tag, resta sullo schermo...), come le passa Firebase; in "data"
+// la stessa forma di Firebase (FCM_MSG), cosi' il tocco funziona come prima.
+// Va registrato PRIMA di firebase.messaging(): stopImmediatePropagation ferma il suo gestore.
+self.addEventListener('push', function (event) {
+  var p = null;
+  try { p = event.data ? event.data.json() : null; } catch (e) { p = null; }
+  if (!p || !p.notification) return;          // nessuna notifica da mostrare: decide Firebase
+  event.stopImmediatePropagation();
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then(function (lista) {
+      var inUso = lista.some(function (c) {
+        return c.visibilityState === 'visible' && c.focused && c.url.indexOf('/burraco-web/') >= 0;
+      });
+      if (inUso) {
+        // come Firebase: il messaggio passa alla pagina aperta, niente notifica
+        p.isFirebaseMessaging = true;
+        p.messageType = 'push-received';
+        lista.forEach(function (c) { c.postMessage(p); });
+        return;
+      }
+      var opzioni = Object.assign({}, p.notification);
+      opzioni.data = { FCM_MSG: p };
+      if (!opzioni.tag) delete opzioni.renotify;  // senza tag Chrome rifiuta renotify
+      return self.registration.showNotification(p.notification.title || 'Burraco', opzioni);
+    })
+  );
+});
+
 importScripts('https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js');
 importScripts('https://www.gstatic.com/firebasejs/10.13.2/firebase-messaging-compat.js');
 
