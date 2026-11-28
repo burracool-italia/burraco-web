@@ -72,6 +72,25 @@
       } catch (e) {}
       return Promise.resolve(ricordata);
     }
+    // 28/11/2026: permesso delle notifiche. L'app lo chiedeva da sola all'apertura della partita,
+    // senza un tocco del giocatore: Safari su iPhone ignora quella richiesta e Chrome su Android
+    // spesso la riduce a una campanella nascosta. Ora lo chiede il pulsante «Attiva le notifiche»,
+    // chiamando questa funzione direttamente dentro il tocco.
+    // Stato: 'granted' / 'denied' / 'default' (mai chiesto) / 'nonsupportate'.
+    function burracoStatoNotifiche() {
+      try {
+        if (!('Notification' in window)) return 'nonsupportate';
+        return Notification.permission;
+      } catch (e) { return 'nonsupportate'; }
+    }
+    function burracoChiediNotifiche() {
+      try {
+        if (!('Notification' in window)) return Promise.resolve('nonsupportate');
+        var r = Notification.requestPermission();
+        if (r && r.then) return r.then(function (s) { return s || Notification.permission; });
+        return Promise.resolve(Notification.permission);
+      } catch (e) { return Promise.resolve(burracoStatoNotifiche()); }
+    }
     // 25/11/2026: suoni degli avvisi con il volume scelto nelle Impostazioni. Con il normale
     // elemento audio il volume veniva ignorato (Android dall'icona sulla Home, iPhone): qui il
     // volume passa da un "GainNode" del Web Audio, che i browser rispettano. Falso = non riuscito
